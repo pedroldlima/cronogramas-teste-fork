@@ -46,11 +46,14 @@ export class UnidadeService {
     return unidade;
   }
 
+
+  //Ler todo da UNIDADE
   async readAll(): Promise<Unidade[]> {
     const unidades = await cursor.find();
     return unidades;
   }
 
+  //Le apenas um da UNIDADE
   async readOne({ descricao_unidade }: findOneUnidadeRequest): Promise<Unidade | Error> {
     const unidade = await cursor.findOne({ where: { descricao_unidade } });
 
