@@ -18,6 +18,7 @@ type findOneUnidadeRequest = {
 };
 
 type updateUnidadeRequest = {
+  id_unidade: string;
   descricao_unidade: string;
   carga_horaria_unidade: number;
   ordem: number;
@@ -65,6 +66,7 @@ export class UnidadeService {
   }
 
   async update({
+    id_unidade,
     descricao_unidade,
     carga_horaria_unidade,
     ordem,
